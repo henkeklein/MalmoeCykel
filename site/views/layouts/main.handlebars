@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <title>Cykla i Malmö</title>
+	{{#if showTests}}
+		<link rel="stylesheet" href="/vendor/mocha.css">
+	{{/if}}
+	<script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+</head>
+<body>
+    
+	<header><img src="/img/logo.png" alt="Meadowlark Travel Logo"></header>
+    {{{body}}}
+    
+    
+	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    
+     <script src="https://code.jquery.com/jquery-1.10.2.js">
+  </script>
+
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js">
+  </script>
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false">
+  </script>
+
+  <script src="markercluster.js"></script>
+
+  <script src="List.js">
+  </script>
+
+  <script src="Mapster.js">
+  </script>
+
+  <script src="mapoptions.js">
+  </script>
+  
+
+  <script src="jquery.mapster.js"></script>
+
+  <script src="script.js">
+  </script>
+    
+	<script>window.jQuery || document.write('<script src="/vendor/js/jquery-2.1.1.min.js"><\/script>')</script>
+	{{{_sections.jquery}}}
+
+	{{#if showTests}}
+		<div id="mocha"></div>
+		<script src="/vendor/mocha.js"></script>
+		<script src="/vendor/chai.js"></script>
+		<script>
+			mocha.ui('tdd');
+			var assert = chai.assert;
+		</script>
+		<script src="/qa/tests-global.js"></script>
+		{{#if pageTestScript}}
+			<script src="{{pageTestScript}}"></script>
+		{{/if}}
+		<script>mocha.run();</script>
+	{{/if}}
+    
+    
+</body>
+</html>
