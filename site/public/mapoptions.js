@@ -6,8 +6,8 @@
       lng: 13,
 
     },
-    zoom: 12,
-    disableDefaultUI: false,
+    zoom: 10,
+    disableDefaultUI: true,
     scrollwheel: false,
     draggable: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP,

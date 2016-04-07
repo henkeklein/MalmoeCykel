@@ -3,21 +3,31 @@
 
 body{
 	height: 100%;
+      width: 100%;
 	padding: 0;
 	margin: 0;
+}
+header{
+   height: 50%;
+    width: 50%;
+    position: static;
 }
 
 html {
 	height: 100%;
+      width: 100%;
+    position: static;
 }
 
 #map-canvas{
 	height: 100%;
+    width: 100%;
+    padding: 100px;
 }
 #pip-pano{
-	height: 200px;
+	height: 100px;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 1;
