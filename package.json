@@ -1,0 +1,22 @@
+{
+  "name": "malmocykel",
+  "version": "1.0.0",
+  "description": "Malmö Cykel ",
+  "main": "List.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henkeklein/MalmoeCykel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henkeklein/MalmoeCykel/issues"
+  },
+  "homepage": "https://github.com/henkeklein/MalmoeCykel#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
