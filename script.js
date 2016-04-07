@@ -10,7 +10,13 @@
       lng: 13,
     }
    });
+   //Cykelpumpar
+   $mapster.mapster('addMarker', {
+    location: 'Kaptensgatan 8, Malmoe, Sweden'
+   });
 
+   
+   //Current position for user
   if(navigator.geolocation) {
   $mapster.mapster('getCurrentPosition', function(position){
     $mapster.mapster('addMarker', {
