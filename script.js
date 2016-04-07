@@ -15,8 +15,7 @@
     location: 'Kaptensgatan 8, Malmoe, Sweden'
    });
 
-   
-   //Current position for user
+   //Current position for user location
   if(navigator.geolocation) {
   $mapster.mapster('getCurrentPosition', function(position){
     $mapster.mapster('addMarker', {
