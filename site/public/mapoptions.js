@@ -7,7 +7,7 @@
 
     },
     zoom: 10,
-    disableDefaultUI: true,
+    disableDefaultUI: false,
     scrollwheel: false,
     draggable: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP,

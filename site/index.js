@@ -29,6 +29,12 @@ app.get('/', function(req, res) {
 	res.render('home');
     
 });
+
+app.get('/map', function(req, res) {
+	res.render('map');
+    
+});
+
 app.get('/about', function(req,res){
 	res.render('about', { 
 		fortune: fortune.getFortune(),
