@@ -10,14 +10,16 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
+/*!
+*Maps 
+*/
+
 map {
       height: 100%;
         height: 100%;
       margin: 0;
       padding: 0;
       }
-
- 
 
 body {
   margin: 0; }
@@ -5932,81 +5934,7 @@ button.close {
     color: #d87a68;
     background-color: #fff; }
 
-.btn-bitbucket {
-  background-color: #205081;
-  color: #fff;
-  background-color: #205081;
-  border-color: rgba(0, 0, 0, 0.2); }
-  .btn-bitbucket:focus, .btn-bitbucket.focus {
-    color: #fff;
-    background-color: #163758;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-bitbucket:hover {
-    color: #fff;
-    background-color: #163758;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-bitbucket:active, .btn-bitbucket.active,
-  .open > .btn-bitbucket.dropdown-toggle {
-    color: #fff;
-    background-color: #163758;
-    border-color: rgba(0, 0, 0, 0.2); }
-    .btn-bitbucket:active:hover, .btn-bitbucket:active:focus, .btn-bitbucket:active.focus, .btn-bitbucket.active:hover, .btn-bitbucket.active:focus, .btn-bitbucket.active.focus,
-    .open > .btn-bitbucket.dropdown-toggle:hover,
-    .open > .btn-bitbucket.dropdown-toggle:focus,
-    .open > .btn-bitbucket.dropdown-toggle.focus {
-      color: #fff;
-      background-color: #0f253c;
-      border-color: rgba(0, 0, 0, 0.2); }
-  .btn-bitbucket:active, .btn-bitbucket.active,
-  .open > .btn-bitbucket.dropdown-toggle {
-    background-image: none; }
-  .btn-bitbucket.disabled:hover, .btn-bitbucket.disabled:focus, .btn-bitbucket.disabled.focus, .btn-bitbucket[disabled]:hover, .btn-bitbucket[disabled]:focus, .btn-bitbucket[disabled].focus,
-  fieldset[disabled] .btn-bitbucket:hover,
-  fieldset[disabled] .btn-bitbucket:focus,
-  fieldset[disabled] .btn-bitbucket.focus {
-    background-color: #205081;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-bitbucket .badge {
-    color: #205081;
-    background-color: #fff; }
 
-.btn-dropbox {
-  background-color: #1087dd;
-  color: #fff;
-  background-color: #1087dd;
-  border-color: rgba(0, 0, 0, 0.2); }
-  .btn-dropbox:focus, .btn-dropbox.focus {
-    color: #fff;
-    background-color: #0d6aad;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-dropbox:hover {
-    color: #fff;
-    background-color: #0d6aad;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-dropbox:active, .btn-dropbox.active,
-  .open > .btn-dropbox.dropdown-toggle {
-    color: #fff;
-    background-color: #0d6aad;
-    border-color: rgba(0, 0, 0, 0.2); }
-    .btn-dropbox:active:hover, .btn-dropbox:active:focus, .btn-dropbox:active.focus, .btn-dropbox.active:hover, .btn-dropbox.active:focus, .btn-dropbox.active.focus,
-    .open > .btn-dropbox.dropdown-toggle:hover,
-    .open > .btn-dropbox.dropdown-toggle:focus,
-    .open > .btn-dropbox.dropdown-toggle.focus {
-      color: #fff;
-      background-color: #0a568c;
-      border-color: rgba(0, 0, 0, 0.2); }
-  .btn-dropbox:active, .btn-dropbox.active,
-  .open > .btn-dropbox.dropdown-toggle {
-    background-image: none; }
-  .btn-dropbox.disabled:hover, .btn-dropbox.disabled:focus, .btn-dropbox.disabled.focus, .btn-dropbox[disabled]:hover, .btn-dropbox[disabled]:focus, .btn-dropbox[disabled].focus,
-  fieldset[disabled] .btn-dropbox:hover,
-  fieldset[disabled] .btn-dropbox:focus,
-  fieldset[disabled] .btn-dropbox.focus {
-    background-color: #1087dd;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-dropbox .badge {
-    color: #1087dd;
-    background-color: #fff; }
 
 .btn-facebook {
   background-color: #3b5998;
@@ -6044,120 +5972,6 @@ button.close {
     border-color: rgba(0, 0, 0, 0.2); }
   .btn-facebook .badge {
     color: #3b5998;
-    background-color: #fff; }
-
-.btn-flickr {
-  background-color: #ff0084;
-  color: #fff;
-  background-color: #ff0084;
-  border-color: rgba(0, 0, 0, 0.2); }
-  .btn-flickr:focus, .btn-flickr.focus {
-    color: #fff;
-    background-color: #cc006a;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-flickr:hover {
-    color: #fff;
-    background-color: #cc006a;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-flickr:active, .btn-flickr.active,
-  .open > .btn-flickr.dropdown-toggle {
-    color: #fff;
-    background-color: #cc006a;
-    border-color: rgba(0, 0, 0, 0.2); }
-    .btn-flickr:active:hover, .btn-flickr:active:focus, .btn-flickr:active.focus, .btn-flickr.active:hover, .btn-flickr.active:focus, .btn-flickr.active.focus,
-    .open > .btn-flickr.dropdown-toggle:hover,
-    .open > .btn-flickr.dropdown-toggle:focus,
-    .open > .btn-flickr.dropdown-toggle.focus {
-      color: #fff;
-      background-color: #a80057;
-      border-color: rgba(0, 0, 0, 0.2); }
-  .btn-flickr:active, .btn-flickr.active,
-  .open > .btn-flickr.dropdown-toggle {
-    background-image: none; }
-  .btn-flickr.disabled:hover, .btn-flickr.disabled:focus, .btn-flickr.disabled.focus, .btn-flickr[disabled]:hover, .btn-flickr[disabled]:focus, .btn-flickr[disabled].focus,
-  fieldset[disabled] .btn-flickr:hover,
-  fieldset[disabled] .btn-flickr:focus,
-  fieldset[disabled] .btn-flickr.focus {
-    background-color: #ff0084;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-flickr .badge {
-    color: #ff0084;
-    background-color: #fff; }
-
-.btn-foursquare {
-  background-color: #f94877;
-  color: #fff;
-  background-color: #f94877;
-  border-color: rgba(0, 0, 0, 0.2); }
-  .btn-foursquare:focus, .btn-foursquare.focus {
-    color: #fff;
-    background-color: #f71752;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-foursquare:hover {
-    color: #fff;
-    background-color: #f71752;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-foursquare:active, .btn-foursquare.active,
-  .open > .btn-foursquare.dropdown-toggle {
-    color: #fff;
-    background-color: #f71752;
-    border-color: rgba(0, 0, 0, 0.2); }
-    .btn-foursquare:active:hover, .btn-foursquare:active:focus, .btn-foursquare:active.focus, .btn-foursquare.active:hover, .btn-foursquare.active:focus, .btn-foursquare.active.focus,
-    .open > .btn-foursquare.dropdown-toggle:hover,
-    .open > .btn-foursquare.dropdown-toggle:focus,
-    .open > .btn-foursquare.dropdown-toggle.focus {
-      color: #fff;
-      background-color: #e30742;
-      border-color: rgba(0, 0, 0, 0.2); }
-  .btn-foursquare:active, .btn-foursquare.active,
-  .open > .btn-foursquare.dropdown-toggle {
-    background-image: none; }
-  .btn-foursquare.disabled:hover, .btn-foursquare.disabled:focus, .btn-foursquare.disabled.focus, .btn-foursquare[disabled]:hover, .btn-foursquare[disabled]:focus, .btn-foursquare[disabled].focus,
-  fieldset[disabled] .btn-foursquare:hover,
-  fieldset[disabled] .btn-foursquare:focus,
-  fieldset[disabled] .btn-foursquare.focus {
-    background-color: #f94877;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-foursquare .badge {
-    color: #f94877;
-    background-color: #fff; }
-
-.btn-github {
-  background-color: #444444;
-  color: #fff;
-  background-color: #444444;
-  border-color: rgba(0, 0, 0, 0.2); }
-  .btn-github:focus, .btn-github.focus {
-    color: #fff;
-    background-color: #2b2b2b;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-github:hover {
-    color: #fff;
-    background-color: #2b2b2b;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-github:active, .btn-github.active,
-  .open > .btn-github.dropdown-toggle {
-    color: #fff;
-    background-color: #2b2b2b;
-    border-color: rgba(0, 0, 0, 0.2); }
-    .btn-github:active:hover, .btn-github:active:focus, .btn-github:active.focus, .btn-github.active:hover, .btn-github.active:focus, .btn-github.active.focus,
-    .open > .btn-github.dropdown-toggle:hover,
-    .open > .btn-github.dropdown-toggle:focus,
-    .open > .btn-github.dropdown-toggle.focus {
-      color: #fff;
-      background-color: #191919;
-      border-color: rgba(0, 0, 0, 0.2); }
-  .btn-github:active, .btn-github.active,
-  .open > .btn-github.dropdown-toggle {
-    background-image: none; }
-  .btn-github.disabled:hover, .btn-github.disabled:focus, .btn-github.disabled.focus, .btn-github[disabled]:hover, .btn-github[disabled]:focus, .btn-github[disabled].focus,
-  fieldset[disabled] .btn-github:hover,
-  fieldset[disabled] .btn-github:focus,
-  fieldset[disabled] .btn-github.focus {
-    background-color: #444444;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-github .badge {
-    color: #444444;
     background-color: #fff; }
 
 .btn-google {
@@ -6198,81 +6012,6 @@ button.close {
     color: #dd4b39;
     background-color: #fff; }
 
-.btn-instagram {
-  background-color: #3f729b;
-  color: #fff;
-  background-color: #3f729b;
-  border-color: rgba(0, 0, 0, 0.2); }
-  .btn-instagram:focus, .btn-instagram.focus {
-    color: #fff;
-    background-color: #305777;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-instagram:hover {
-    color: #fff;
-    background-color: #305777;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-instagram:active, .btn-instagram.active,
-  .open > .btn-instagram.dropdown-toggle {
-    color: #fff;
-    background-color: #305777;
-    border-color: rgba(0, 0, 0, 0.2); }
-    .btn-instagram:active:hover, .btn-instagram:active:focus, .btn-instagram:active.focus, .btn-instagram.active:hover, .btn-instagram.active:focus, .btn-instagram.active.focus,
-    .open > .btn-instagram.dropdown-toggle:hover,
-    .open > .btn-instagram.dropdown-toggle:focus,
-    .open > .btn-instagram.dropdown-toggle.focus {
-      color: #fff;
-      background-color: #26455d;
-      border-color: rgba(0, 0, 0, 0.2); }
-  .btn-instagram:active, .btn-instagram.active,
-  .open > .btn-instagram.dropdown-toggle {
-    background-image: none; }
-  .btn-instagram.disabled:hover, .btn-instagram.disabled:focus, .btn-instagram.disabled.focus, .btn-instagram[disabled]:hover, .btn-instagram[disabled]:focus, .btn-instagram[disabled].focus,
-  fieldset[disabled] .btn-instagram:hover,
-  fieldset[disabled] .btn-instagram:focus,
-  fieldset[disabled] .btn-instagram.focus {
-    background-color: #3f729b;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-instagram .badge {
-    color: #3f729b;
-    background-color: #fff; }
-
-.btn-linkedin {
-  background-color: #007bb6;
-  color: #fff;
-  background-color: #007bb6;
-  border-color: rgba(0, 0, 0, 0.2); }
-  .btn-linkedin:focus, .btn-linkedin.focus {
-    color: #fff;
-    background-color: #005983;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-linkedin:hover {
-    color: #fff;
-    background-color: #005983;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-linkedin:active, .btn-linkedin.active,
-  .open > .btn-linkedin.dropdown-toggle {
-    color: #fff;
-    background-color: #005983;
-    border-color: rgba(0, 0, 0, 0.2); }
-    .btn-linkedin:active:hover, .btn-linkedin:active:focus, .btn-linkedin:active.focus, .btn-linkedin.active:hover, .btn-linkedin.active:focus, .btn-linkedin.active.focus,
-    .open > .btn-linkedin.dropdown-toggle:hover,
-    .open > .btn-linkedin.dropdown-toggle:focus,
-    .open > .btn-linkedin.dropdown-toggle.focus {
-      color: #fff;
-      background-color: #00405f;
-      border-color: rgba(0, 0, 0, 0.2); }
-  .btn-linkedin:active, .btn-linkedin.active,
-  .open > .btn-linkedin.dropdown-toggle {
-    background-image: none; }
-  .btn-linkedin.disabled:hover, .btn-linkedin.disabled:focus, .btn-linkedin.disabled.focus, .btn-linkedin[disabled]:hover, .btn-linkedin[disabled]:focus, .btn-linkedin[disabled].focus,
-  fieldset[disabled] .btn-linkedin:hover,
-  fieldset[disabled] .btn-linkedin:focus,
-  fieldset[disabled] .btn-linkedin.focus {
-    background-color: #007bb6;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .btn-linkedin .badge {
-    color: #007bb6;
-    background-color: #fff; }
 
 .btn-microsoft {
   background-color: #2672ec;
@@ -7902,26 +7641,10 @@ button.close {
 .fa-stack-overflow:before {
   content: ""; }
 
-.fa-instagram:before {
-  content: ""; }
-
-.fa-flickr:before {
-  content: ""; }
 
 .fa-adn:before {
   content: ""; }
 
-.fa-bitbucket:before {
-  content: ""; }
-
-.fa-bitbucket-square:before {
-  content: ""; }
-
-.fa-tumblr:before {
-  content: ""; }
-
-.fa-tumblr-square:before {
-  content: ""; }
 
 .fa-long-arrow-down:before {
   content: ""; }
@@ -8344,11 +8067,6 @@ button.close {
 .fa-line-chart:before {
   content: ""; }
 
-.fa-lastfm:before {
-  content: ""; }
-
-.fa-lastfm-square:before {
-  content: ""; }
 
 .fa-toggle-off:before {
   content: ""; }
