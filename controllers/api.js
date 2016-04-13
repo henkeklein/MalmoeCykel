@@ -10,6 +10,24 @@ var ig;
 var Y;
 var request;
 
+function loadScript(url)
+{
+    // Adding the script tag to the head as suggested before
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+
+    // Then bind the event to the callback function.
+    // There are several events for cross browser compatibility.
+    //script.onreadystatechange = callback;
+    //script.onload = callback;
+
+    // Fire the loading
+    head.appendChild(script);
+}
+
+
 /**
  * GET /api
  * List of API examples.
@@ -20,10 +38,12 @@ exports.getApi = function(req, res) {
   });
 };
 
-
+//Try to get in javascripts files in this javascript file
 exports.getMap = function(req, res) {
-
-   
+   var script = document.createElement('Mapster.js');
+script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
     /**
  * GET /api/Maps
  * Facebook API example.
