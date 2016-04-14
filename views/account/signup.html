@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token">
+
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+</head>
+<div class="page-header">
+  <h3>Sign up</h3>
+</div>
+<form id="signup-form" method="POST" class="form-horizontal">
+  <input type="hidden" name="_csrf"/>
+  <div class="form-group">
+    <label for="email" class="col-sm-3 control-label">Email</label>
+    <div class="col-sm-7">
+      <input type="email" name="email" id="email" placeholder="Email" autofocus="autofocus" required="required" class="form-control"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password" class="col-sm-3 control-label">Password</label>
+    <div class="col-sm-7">
+      <input type="password" name="password" id="password" placeholder="Password" required="required" class="form-control"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="confirmPassword" class="col-sm-3 control-label">Confirm Password</label>
+    <div class="col-sm-7">
+      <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required="required" class="form-control"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-7">
+      <button type="submit" class="btn btn-success"><i class="fa fa-user-plus"></i>Signup</button>
+    </div>
+  </div>
+</form>
+    
+        <footer>
+  <div class="container text-center">
+    <p class="pull-left">© 2016 Malmö Högskola, Inc. All Rights Reserved</p>
+    <ul class="pull-right list-inline">
+      <li><a href="http://malmo.se">Malmö stad</a></li>
+      <li><a href="http://mah.se">MAH</a></li>
+    </ul>
+  </div>
+</footer>

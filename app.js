@@ -58,7 +58,8 @@ mongoose.connection.on('error', function() {
  */
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 app.use(compress());
 app.use(sass({
   src: path.join(__dirname, 'public'),
@@ -128,7 +129,7 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
  * API examples routes.
  */
 app.get('/api', apiController.getApi);
-app.get('/api/maps', apiController.getMap);
+app.get('/api/hej', apiController.getMap);
 app.get('/api/facebook', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getFacebook);
 
 

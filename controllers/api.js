@@ -6,8 +6,6 @@ var async = require('async');
  */
 var validator;
 var graph;
-var ig;
-var Y;
 var request;
 
 /**
@@ -20,15 +18,12 @@ exports.getApi = function(req, res) {
   });
 };
 
-
-exports.getMap = function(req, res) {
-
-   
     /**
  * GET /api/Maps
  * Facebook API example.
  */
-  res.render('api/maps', {
+exports.getMap = function(req, res) {
+  res.render('hej', {
     title: 'Maps Examples'
   });
 };
