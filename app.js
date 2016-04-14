@@ -33,6 +33,7 @@ var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
+var mapController = require('./controllers/map');
 
 /**
  * API keys and Passport configuration.
@@ -129,7 +130,7 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
  * API examples routes.
  */
 app.get('/api', apiController.getApi);
-app.get('/api/hej', apiController.getMap);
+app.get('/maps/maps', mapController.getMap);
 app.get('/api/facebook', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getFacebook);
 
 
