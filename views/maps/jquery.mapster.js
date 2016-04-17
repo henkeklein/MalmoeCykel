@@ -3,22 +3,22 @@
 
 $.widget( "mapster.mapster", {
       // default options
-      options: { 
+      options: {
 
       },
- 
+
       // the constructor
       _create: function() {
 
       	var element = this.element[0],
       	options = this.options;
       	this.map = Mapster.create(element, options);
-        
+
       },
- 
+
       // called when created, and later when changing options
       _refresh: function() {
-        
+
       },
 
 
@@ -26,7 +26,7 @@ $.widget( "mapster.mapster", {
       	var self = this;
       	self.map.getCurrentPosition(callback);
       },
- 
+
       // a public method to change the color to a random value
       // can be called directly via .colorize( "random" )
       addMarker: function( opts ) {
@@ -70,19 +70,19 @@ $.widget( "mapster.mapster", {
         	$.each(elements, function(key, element){
         		self.map.setPano(element, opts);
         	});
-        	
+
         },
 
- 
+
         // trigger an event, check if it's canceled
-      
- 
+
+
       // events bound via _on are removed automatically
       // revert other modifications here
       _destroy: function() {
-        
+
       },
- 
+
       // _setOptions is called with a hash of all options that are changing
       // always refresh when changing options
       _setOptions: function() {
@@ -90,7 +90,7 @@ $.widget( "mapster.mapster", {
         this._superApply( arguments );
         this._refresh();
       },
- 
+
       // _setOption is called for each individual option that is changing
       _setOption: function( key, value ) {
         this._super( key, value );

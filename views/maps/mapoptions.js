@@ -1,5 +1,5 @@
 (function(window, google, mapster) {
-  
+
     mapster.map_options= {
     center: {
       lat: 55.6,
@@ -16,4 +16,3 @@
     geocoder: true
     };
 }(window, google, window.Mapster || (window.Mapster={})))
-
