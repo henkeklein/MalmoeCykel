@@ -2,13 +2,13 @@
 
     mapster.map_options= {
     center: {
-      lat: 55.6,
-      lng: 13,
+      lat: 55.606641,
+      lng: 13.000076,
 
     },
-    zoom: 12,
+    zoom: 13,
     disableDefaultUI: false,
-    scrollwheel: false,
+    scrollwheel: true,
     draggable: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
 

@@ -6,20 +6,46 @@
 
    $mapster.mapster('setPano', '#pip-pano', {
     position: {
-      lat: 55.6,
-      lng: 13,
-    }
+      lat: 55.606641,
+      lng: 13.000076,
+    },
    });
 
+    $mapster.mapster('addMarker', {
+        location: 'Limhamnsvägen, Brygga 1, Malmo',
+        event:{
+          name: 'click',
+          callback: function(){
+            alert('Goal Position');
+          }
+        },
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Bike_downhill_%E2%80%93_Sports_%E2%80%93_Dark.png'
+});
+
   $mapster.mapster('addMarker', {
-    location: 'Golden Gate Bridge, San Fransisco, CA'
-    });
+    location: 'Stortorget, Malmo',
+    event:{
+      name:'click',
+      callback: function(){
+        alert('Start Position')
+      }
+    },
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/2/28/Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Bike_rising_%E2%80%93_Sports_%E2%80%93_White.png'
+  });
+
+
 
   if(navigator.geolocation) {
   $mapster.mapster('getCurrentPosition', function(position){
     $mapster.mapster('addMarker', {
       lat: position.coords.latitude,
-      lng: position.coords.longitude
+      lng: position.coords.longitude,
+      event:{
+        name: 'click',
+        callback: function(){
+          alert('Current location');
+        }
+      },
     });
   });
 }

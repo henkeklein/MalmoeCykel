@@ -74,18 +74,12 @@
         if(opts.events){
           self._attachEvents(marker, opts.events);
         }
-        if(opts.content){
+        if(opts.event){
           self.on({
           obj: marker,
-          event: 'click',
-          callback: function(){
-            var infoWindow = new google.maps.InfoWindow({
-              content: opts.content
-            });
-
-            infoWindow.open(self.gMap, marker);
-            }
-          })
+          event: opts.event.name,
+          callback: opts.event.callback
+          });
         }
         return marker;
       },
