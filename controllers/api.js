@@ -40,7 +40,7 @@ exports.getApi = function(req, res) {
 
 
 exports.getMap = function(req, res) {
-  res.render('maps/maps', {
+  res.render('maps/google', {
     title: 'Maps Examples'
   });
 };
