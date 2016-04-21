@@ -3,7 +3,6 @@ var passport = require('passport');
 var request = require('request');
 var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
-var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var OpenIDStrategy = require('passport-openid').Strategy;
 var OAuthStrategy = require('passport-oauth').OAuthStrategy;
 var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
@@ -21,23 +20,6 @@ passport.deserializeUser(function(id, done) {
 });
 
 
-/**
- * Sign in using Email and Password.
- */
-passport.use(new LocalStrategy({ usernameField: 'email' }, function(email, password, done) {
-  User.findOne({ email: email.toLowerCase() }, function(err, user) {
-    if (!user) {
-      return done(null, false, { msg: 'Email ' + email + ' not found.' });
-    }
-    user.comparePassword(password, function(err, isMatch) {
-      if (isMatch) {
-        return done(null, user);
-      } else {
-        return done(null, false, { msg: 'Invalid email or password.' });
-      }
-    });
-  });
-}));
 
 /**
  * OAuth Strategy Overview

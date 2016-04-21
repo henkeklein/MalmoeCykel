@@ -1,56 +1,85 @@
-
-<!doctype html>
 <html>
-<head>
-    <title>Malmo bicycle</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-    <style>
-        body        { padding-top:80px; }
-    </style>
-</head>
 <body>
+<div id="fb-root"></div>
+     <script src="//connect.facebook.net/en_US/all.js"></script>
     
-    <h1>Bike buddy</h1>
     
-       <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="/">Home</a></li>
-        <li><a href="/api">API Examples</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/login">Login</a></li>
-        <li><a href="/signup">Create Account</a></li>
-      </ul>
-  </div>
-</nav>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '754220301289665',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
     
-<div class="container">
+   	function Login()
+	{
+	
+		FB.login(function(response) {
+		   if (response.authResponse) 
+		   {
+		    	getUserInfo();
+  			} else 
+  			{
+  	    	 console.log('User cancelled login or did not fully authorize.');
+   			}
+		 },{scope: 'email,user_photos,user_videos'});
+	
+	
+	}
 
-    <div class="jumbotron text-center">
-        <h1><span class="fa fa-lock"></span> Facebook Login</h1>
+  function getUserInfo() {
+	    FB.api('/me', function(response) {
 
-        <p>Login or Register with:</p>
+	  var str="<b>Name</b> : "+response.name+"<br>";
+	  	  str +="<b>Link: </b>"+response.link+"<br>";
+	  	  str +="<b>Username:</b> "+response.username+"<br>";
+	  	  str +="<b>id: </b>"+response.id+"<br>";
+	  	  str +="<b>Email:</b> "+response.email+"<br>";
+	  	  str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
+	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
+	  	  document.getElementById("status").innerHTML=str;
+	  	  	    
+    });
+    }
+	function getPhoto()
+	{
+	  FB.api('/me/picture?type=normal', function(response) {
 
-        <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
+		  var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
+	  	  document.getElementById("status").innerHTML+=str;
+	  	  	    
+    });
+	
+	}
+	function Logout()
+	{
+		FB.logout(function(){document.location.reload();});
+	}
 
-    </div>
+
+</script>
+<div align="center">
+<h2>Facebook OAuth Javascript Demo</h2>
+
+<div id="status">
+ Click on Below Image to start the demo: <br/>
+<img src="http://hayageek.com/examples/oauth/facebook/oauth-javascript/LoginWithFacebook.png" style="cursor:pointer;" onclick="Login()"/>
+</div>
+<br/><br/><br/><br/><br/>
+<div id="message">
+Logs:<br/>
+</div>
 
 </div>
-    
-               <footer>
-<div class="footer navbar-fixed-bottom">
-  <div class="container text-center">
-    <p class="pull-left">© 2016 Malmö Högskola, Inc. All Rights Reserved</p>
-    <ul class="pull-right list-inline">
-      <li><a href="http://www.malmotown.com">Malmö stad</a></li>
-      <li><a href="http://mah.se">MAH</a></li>
-    </ul>
-  </div>
-</div>
-</footer>
-    
 </body>
-</html>   
+</html>
