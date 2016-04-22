@@ -1,9 +1,9 @@
 <html>
 <body>
 <div id="fb-root"></div>
-     <script src="//connect.facebook.net/en_US/all.js"></script>
-    
-    
+     <script js.src="http://connect.facebook.net/en_US/all.js"></script>
+
+
     <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -20,21 +20,21 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-    
+
    	function Login()
 	{
-	
+
 		FB.login(function(response) {
-		   if (response.authResponse) 
+		   if (response.authResponse)
 		   {
 		    	getUserInfo();
-  			} else 
+  			} else
   			{
   	    	 console.log('User cancelled login or did not fully authorize.');
    			}
 		 },{scope: 'email,user_photos,user_videos'});
-	
-	
+
+
 	}
 
   function getUserInfo() {
@@ -48,7 +48,7 @@
 	  	  str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
 	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	  document.getElementById("status").innerHTML=str;
-	  	  	    
+
     });
     }
 	function getPhoto()
@@ -57,9 +57,9 @@
 
 		  var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
 	  	  document.getElementById("status").innerHTML+=str;
-	  	  	    
+
     });
-	
+
 	}
 	function Logout()
 	{
