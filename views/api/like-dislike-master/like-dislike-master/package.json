@@ -1,0 +1,19 @@
+{
+  "name": "like-dislike",
+  "version": "1.0.0",
+  "description": "JQuery rating plugin",
+  "homepage": "https://github.com/uagrace/like-dislike",
+  "author": "Maxim Tkachuk <uagrace91@gmail.com>",
+  "main": "js/like-dislike.js",
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "like",
+    "dislike",
+    "rating"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-minify": "0.0.5"
+  }
+}
