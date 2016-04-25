@@ -111,7 +111,10 @@ app.use(express.static(path.join(__dirname, 'maps')));
 /**
  * Primary app routes.
  */
-app.get('/', homeController.index);
+app.get('/index', homeController.index);
+app.get('/', apiController.getFacebook);
+
+
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
@@ -129,17 +132,7 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
  */
 app.get('/api', apiController.getApi);
 app.get('/maps/maps', apiController.getMap);
-app.get('/api/facebook', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getFacebook);
 
-
-/**
- * OAuth authentication routes. (Sign in)
- */
-
-app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_location'] }));
-app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }), function(req, res) {
-  res.redirect(req.session.returnTo || '/');
-});
 
 
 /**

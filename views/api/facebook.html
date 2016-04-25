@@ -1,6 +1,119 @@
+<!DOCTYPE html>
 <html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+
+<title> Login - Bikebuddy</title>
+<style>
+body {
+    background: url('http://hillsidepeak.com/wp-content/uploads/2014/08/sportivity-7.jpg') no-repeat fixed center center;
+    background-size: cover;
+    font-family: Montserrat;
+}
+
+.logo {
+    width: 335px;
+    height: 89px;
+    background: url('http://www.tmf-dialogue.net/wp-content/uploads/2015/11/malmo_destination_logo_big-red-335x89.jpg') no-repeat;
+    margin: 30px auto;
+}
+
+.login-block {
+    width: 320px;
+        height: 250px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid #ff656c;
+    margin: 0 auto;
+}
+
+.login-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.login-block input#username {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#username:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid #ff656c;
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    background: #ff656c;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e15960;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-block button:hover {
+    background: #ff7b81;
+}
+</style>
+</head>
+
 <body>
-<div id="fb-root"></div>
+
+<div class="logo"></div>
+<div class="login-block">
+    <h1>Login</h1>
+    <input type="text" value="" placeholder="Username" id="username" />
+    <input type="password" value="" placeholder="Password" id="password" />
+        
+
+<div id="status"><br/>
+<img src="http://hayageek.com/examples/oauth/facebook/oauth-javascript/LoginWithFacebook.png" style="cursor:pointer;" onclick="Login()"/></div>
+<br/><br/><br/><br/><br/>
+<div id="message"><br/>
+</div>   
+</div>
+    
+    <div id="fb-root"></div>
      <script src="//connect.facebook.net/en_US/all.js"></script>
     
     
@@ -23,20 +136,19 @@
     
    	function Login()
 	{
-	
 		FB.login(function(response) {
 		   if (response.authResponse) 
 		   {
 		    	getUserInfo();
+                window.location.href = "index";
+            
   			} else 
   			{
   	    	 console.log('User cancelled login or did not fully authorize.');
    			}
 		 },{scope: 'email,user_photos,user_videos'});
 	
-	
 	}
-
   function getUserInfo() {
 	    FB.api('/me', function(response) {
 
@@ -47,17 +159,17 @@
 	  	  str +="<b>Email:</b> "+response.email+"<br>";
 	  	  str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
 	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
-	  	  document.getElementById("status").innerHTML=str;
-	  	  	    
+	  	  document.getElementById("status").innerHTML=str; 	
+                 
     });
+     
     }
 	function getPhoto()
 	{
 	  FB.api('/me/picture?type=normal', function(response) {
 
 		  var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
-	  	  document.getElementById("status").innerHTML+=str;
-	  	  	    
+	  	  document.getElementById("status").innerHTML+=str;  	  	    
     });
 	
 	}
@@ -65,21 +177,9 @@
 	{
 		FB.logout(function(){document.location.reload();});
 	}
+        
+        </script>
 
-
-</script>
-<div align="center">
-<h2>Facebook OAuth Javascript Demo</h2>
-
-<div id="status">
- Click on Below Image to start the demo: <br/>
-<img src="http://hayageek.com/examples/oauth/facebook/oauth-javascript/LoginWithFacebook.png" style="cursor:pointer;" onclick="Login()"/>
-</div>
-<br/><br/><br/><br/><br/>
-<div id="message">
-Logs:<br/>
-</div>
-
-</div>
 </body>
+
 </html>
