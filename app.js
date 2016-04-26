@@ -107,6 +107,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'controllers')));
 app.use(express.static(path.join(__dirname, 'views')));
 app.use(express.static(path.join(__dirname, 'maps')));
+app.use(express.static(path.join(__dirname, 'api')));
 
 /**
  * Primary app routes.
