@@ -11,14 +11,12 @@ body {
     background-size: cover;
     font-family: Montserrat;
 }
-
 .logo {
     width: 335px;
     height: 89px;
     background: url('http://www.tmf-dialogue.net/wp-content/uploads/2015/11/malmo_destination_logo_big-red-335x89.jpg') no-repeat;
     margin: 30px auto;
 }
-
 .login-block {
     width: 320px;
         height: 250px;
@@ -28,7 +26,6 @@ body {
     border-top: 5px solid #ff656c;
     margin: 0 auto;
 }
-
 .login-block h1 {
     text-align: center;
     color: #000;
@@ -37,7 +34,6 @@ body {
     margin-top: 0;
     margin-bottom: 20px;
 }
-
 .login-block input {
     width: 100%;
     height: 42px;
@@ -50,31 +46,25 @@ body {
     padding: 0 20px 0 50px;
     outline: none;
 }
-
 .login-block input#username {
     background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
     background-size: 16px 80px;
 }
-
 .login-block input#username:focus {
     background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
     background-size: 16px 80px;
 }
-
 .login-block input#password {
     background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
     background-size: 16px 80px;
 }
-
 .login-block input#password:focus {
     background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
     background-size: 16px 80px;
 }
-
 .login-block input:active, .login-block input:focus {
     border: 1px solid #ff656c;
 }
-
 .login-block button {
     width: 100%;
     height: 40px;
@@ -90,7 +80,6 @@ body {
     outline: none;
     cursor: pointer;
 }
-
 .login-block button:hover {
     background: #ff7b81;
 }
@@ -98,7 +87,6 @@ body {
 </head>
 
 <body>
-<<<<<<< HEAD
 
 <div class="logo"></div>
 <div class="login-block">
@@ -118,12 +106,6 @@ body {
      <script src="//connect.facebook.net/en_US/all.js"></script>
     
     
-=======
-<div id="fb-root"></div>
-     <script js.src="http://connect.facebook.net/en_US/all.js"></script>
-
-
->>>>>>> f1ef4cc8e29cac6b280d0f96eaa43528a6bce334
     <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -132,7 +114,6 @@ body {
       version    : 'v2.6'
     });
   };
-
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
@@ -140,38 +121,24 @@ body {
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-
+    
    	function Login()
 	{
-<<<<<<< HEAD
-=======
-
->>>>>>> f1ef4cc8e29cac6b280d0f96eaa43528a6bce334
 		FB.login(function(response) {
-		   if (response.authResponse)
+		   if (response.authResponse) 
 		   {
 		    	getUserInfo();
-<<<<<<< HEAD
              
             
   			} else 
-=======
-  			} else
->>>>>>> f1ef4cc8e29cac6b280d0f96eaa43528a6bce334
   			{
   	    	 console.log('User cancelled login or did not fully authorize.');
    			}
 		 },{scope: 'email,user_photos,user_videos'});
-<<<<<<< HEAD
 	
-=======
-
-
->>>>>>> f1ef4cc8e29cac6b280d0f96eaa43528a6bce334
 	}
   function getUserInfo() {
 	    FB.api('/me', function(response) {
-
 	  var str="<b>Name</b> : "+response.name+"<br>";
 	  	  str +="<b>Link: </b>"+response.link+"<br>";
 	  	  str +="<b>Username:</b> "+response.username+"<br>";
@@ -179,29 +146,18 @@ body {
 	  	  str +="<b>Email:</b> "+response.email+"<br>";
 	  	  str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
 	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
-<<<<<<< HEAD
 	  	  document.getElementById("status").innerHTML=str; 	
                  
-=======
-	  	  document.getElementById("status").innerHTML=str;
-
->>>>>>> f1ef4cc8e29cac6b280d0f96eaa43528a6bce334
     });
      
     }
 	function getPhoto()
 	{
 	  FB.api('/me/picture?type=normal', function(response) {
-
 		  var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
-<<<<<<< HEAD
 	  	  document.getElementById("status").innerHTML+=str;  	  	    
-=======
-	  	  document.getElementById("status").innerHTML+=str;
-
->>>>>>> f1ef4cc8e29cac6b280d0f96eaa43528a6bce334
     });
-
+	
 	}
 	function Logout()
 	{
@@ -211,9 +167,5 @@ body {
         </script>
 
 </body>
-<<<<<<< HEAD
 
 </html>
-=======
-</html>
->>>>>>> f1ef4cc8e29cac6b280d0f96eaa43528a6bce334
