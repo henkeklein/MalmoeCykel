@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var eventSchema = mongoose.Schema({
+var genreEvents = mongoose.Schema({
   name: {
     type: String,
     required: true
@@ -11,7 +11,7 @@ var eventSchema = mongoose.Schema({
   }
 });
 
-var Events = module.exports = mongoose.model('Events', eventSchema);
+var Events = module.exports = mongoose.model('events', genreEvents);
 
 module.exports.getEvents = function(callback, limit){
   Events.find(callback).limit(limit);

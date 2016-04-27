@@ -14,15 +14,12 @@ var MongoStore = require('connect-mongo/es5')(session);
 var flash = require('express-flash');
 var path = require('path');
 var mongoose = require('mongoose');
-var mongoose1 = require('mongoose');
 var passport = require('passport');
 var expressValidator = require('express-validator');
 var sass = require('node-sass-middleware');
 var multer = require('multer');
 var upload = multer({ dest: path.join(__dirname, 'uploads') });
 
-mongoose1.createConnection('mongodb://localhost/MalmoeCykel');
-var db = mongoose1.connection;
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -39,7 +36,6 @@ var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
 var mapController = require('./controllers/map');
-var superEvent = require('./controllers/events');
 /**
  * API keys and Passport configuration.
  */
@@ -135,17 +131,15 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
 /**
  * API examples routes.
  */
-Events = require('./controllers/events');
+Event = require('./controllers/events');
 app.get('/api', apiController.getApi);
 app.get('/maps/maps', apiController.getMap);
 
 app.get('/api/events', function(req, res){
-  var data = [];
-  Events.getEvents(function(err, events){
-    for (var name in events){
-      data.push(JSON.parse(obj[id]));
+  Event.getEvents(function(err, events){
+    if(err){
+      throw err;
     }
-    console.log(events)
     res.json(events);
 
   });
