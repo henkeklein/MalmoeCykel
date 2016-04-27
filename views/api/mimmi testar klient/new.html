@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <link rel="stylesheet" href="testmain.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" href="testmain.css">
 </head>
 
 <body>
@@ -45,23 +46,26 @@
     <h1>BikeBuddy</h1> 
 	  </div>
   
-  <form>
-  <input type="text" class="form-control"  placeholder="Event name">
-  <input type="text" placeholder="Start/stop">
-  <input type="file" name="media" class="file-btn" id="pic">
-  <input type="text" class="form-group" placeholder="Description">
-				<div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>	
-	
+
+  <form id="eventform">
+	  <input type="text" class="form-control"  placeholder="Event name">
+	  <input type="text" placeholder="Start/stop">
+	  <input type="file" name="media" class="file-btn" id="pic">
+	  <input type="text" class="form-group" placeholder="Description">
+	  <input type="text" name="date" id="date">
+	  <!--när denna submit knapp trycks så kommer det att sparas i databas -->
+	  <button type="button" class="btn btn-success">Submit</button>
   </form>
   
+	<footer class="container">
+		<div class="row">
+			<p class="col-sm-4">&copy; 2016 BikeBuddy </p>      
+		</div>
+	</footer>
+  
   <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
+        $(function() {
+			$( "#date" ).datepicker();
+		});
+    </script>
  </body>
