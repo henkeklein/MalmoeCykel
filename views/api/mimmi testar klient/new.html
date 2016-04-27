@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-	<link rel="stylesheet" href="testmain.css">
+	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="testmain.css">
 </head>
 
 <body>
@@ -46,16 +46,29 @@
     <h1>BikeBuddy</h1> 
 	  </div>
   
-
-  <form id="eventform">
-	  <input type="text" class="form-control"  placeholder="Event name">
-	  <input type="text" placeholder="Start/stop">
-	  <input type="file" name="media" class="file-btn" id="pic">
-	  <input type="text" class="form-group" placeholder="Description">
-	  <input type="text" name="date" id="date">
+<div class="form-group" >
+	<div class="col-sm-3"> 
+		<input type="text" class="form-control" id="title"  placeholder="Event name">
+		<input type="text" class="form-control" name="date" id="date" placeholder= "Choose Date">
+	</div>
+	<div class="col-sm-2">
+		<input type="text" class="form-control" id="start"  placeholder="Start">
+		<input type="text" class="form-control" id="end" placeholder="End">
+	</div>
+	<div class="col-sm-8">
+		<input type="text" class="form-control" id="describ" placeholder="Description">
+    </div>
 	  <!--när denna submit knapp trycks så kommer det att sparas i databas -->
-	  <button type="button" class="btn btn-success">Submit</button>
-  </form>
+	<div class="form-group">        
+		<div class="col-sm-offset-2 col-sm-6">
+			<button type="submit" id="save" class="btn btn-default">Submit</button>
+		</div>
+    </div>
+</div>
+
+<button class="se-saved">Se event </button>
+<div id="test"></div>
+
   
 	<footer class="container">
 		<div class="row">
@@ -68,4 +81,5 @@
 			$( "#date" ).datepicker();
 		});
     </script>
+	<script src="local.js"></script>
  </body>
