@@ -20,6 +20,37 @@ var multer = require('multer');
 var upload = multer({ dest: path.join(__dirname, 'uploads') });
 
 /**
+ * Create Express server.
+ */
+var app = express();
+
+
+mongoose.connect('mongodb://localhost:3000/');
+
+var Events = new mongoose.Schema({
+	"Titel": String,
+	"Description" : String,
+	"Min" : Number,
+	"Max" : Number,
+	"StartLocation" : String,
+	"EndLocation" : String
+});
+
+var user = mongoose.model('emp', Events);
+
+app.post('Events/new', function(req,res) {
+  new user({
+    title : req.body.title,
+    description : req.body.description,
+    min : req.body.min,
+    max : req.body.max,
+    startLocation : req.body.startLocation,
+    stopLocation : req.body.stopLocation
+  })
+});
+
+
+/**
  * Load environment variables from .env file, where API keys and passwords are configured.
  *
  * Default path: .env (You can remove the path argument entirely, after renaming `.env.example` to `.env`)
@@ -40,10 +71,6 @@ var mapController = require('./controllers/map');
  */
 var passportConfig = require('./config/passport');
 
-/**
- * Create Express server.
- */
-var app = express();
 
 /**
  * Connect to MongoDB.
@@ -108,6 +135,7 @@ app.use(express.static(path.join(__dirname, 'controllers')));
 app.use(express.static(path.join(__dirname, 'views')));
 app.use(express.static(path.join(__dirname, 'maps')));
 app.use(express.static(path.join(__dirname, 'api')));
+app.use(express.static(path.join(__dirname, 'dbviews')));
 
 /**
  * Primary app routes.
