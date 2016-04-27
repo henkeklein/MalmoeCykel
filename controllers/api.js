@@ -10,22 +10,7 @@ var ig;
 var Y;
 var request;
 
-function loadScript(url)
-{
-    // Adding the script tag to the head as suggested before
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = url;
 
-    // Then bind the event to the callback function.
-    // There are several events for cross browser compatibility.
-    //script.onreadystatechange = callback;
-    //script.onload = callback;
-
-    // Fire the loading
-    head.appendChild(script);
-}
 
 
 /**
@@ -42,6 +27,12 @@ exports.getApi = function(req, res) {
 exports.getMap = function(req, res) {
   res.render('maps/google', {
     title: 'Maps Examples'
+  });
+};
+
+exports.getMongo = function(req, res){
+  res.render('dbviews/mongodb', {
+    title: 'Create new event'
   });
 };
 

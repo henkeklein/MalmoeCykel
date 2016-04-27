@@ -56,6 +56,7 @@ mongoose.connection.on('error', function() {
 /**
  * Express configuration.
  */
+
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
@@ -77,13 +78,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-app.use(function(req, res, next) {
-  if (req.path === '/api/upload') {
-    next();
-  } else {
-    lusca.csrf()(req, res, next);
-  }
-});
+
 app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
 app.use(function(req, res, next) {
@@ -139,6 +134,17 @@ app.get('/api/events', function(req, res){
   });
 });
 
+app.get('/newevent', apiController.getMongo);
+
+app.post('/api/events', function(req, res){
+  var event = req.body;
+  Event.addEvents(event, function(err, event){
+    if(err){
+      throw err;
+    }
+    res.json(event);
+  });
+});
 
 
 
