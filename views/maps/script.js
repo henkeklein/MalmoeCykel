@@ -3,7 +3,7 @@
   var $mapster = $('#map-canvas').mapster(Mapster.map_options);
 
 
-
+//postition där den högra rutan startar.
    $mapster.mapster('setPano', '#pip-pano', {
     position: {
       lat: 55.606641,
@@ -11,6 +11,7 @@
     },
    });
 
+   //positon som är mål
     $mapster.mapster('addMarker', {
         location: 'Limhamnsvägen, Brygga 1, Malmo',
         event:{
@@ -22,6 +23,7 @@
         icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Bike_downhill_%E2%80%93_Sports_%E2%80%93_Dark.png'
 });
 
+	//position som är start
   $mapster.mapster('addMarker', {
     location: 'Stortorget, Malmo',
     event:{
@@ -34,7 +36,7 @@
   });
 
 
-
+//Hämtar vart enheten är 
   if(navigator.geolocation) {
   $mapster.mapster('getCurrentPosition', function(position){
     $mapster.mapster('addMarker', {
